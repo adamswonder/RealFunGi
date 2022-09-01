@@ -10,7 +10,8 @@
   body {
     padding: 20px;
     text-align: center;
-    background-color: #fafafa;
+    float: left;
+    background-color: #ffff;
   }
   
   h1 {
@@ -21,7 +22,8 @@
   .logo {
     margin-bottom: 20px;
     height: 200px;
-    border-radius: 80px;
+    width: 300px;
+    border-radius: 30px;
   }
   
   .image-container {
