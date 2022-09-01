@@ -11,12 +11,12 @@
 
 </head>
 
-<body>
+<body onload=todayDate()>
     <div class="fullscreen-bg">
         <video loop muted autoplay class="fullscreen-bg_video">
-             <source src="./assets/images/club-landing.mp4" type="video/mp4">
+            <source src="./assets/images/club-landing.mp4" type="video/mp4">
         </video>
-   </div>
+    </div>
     <!-- dadjokeapproved logo -->
     <h1>Realfungi</h1>
     <img src="/assets/images/dad.png" alt="dadsaysjoke" class="logo">
@@ -24,7 +24,7 @@
     <!-- image card -->
     <div class="image-container">
         <div class="image-card">
-            <h2 id="card-title" class="title">Title of image goes here</h2>
+            <h2 id="card-title" class="title">Title of joke goes here</h2>
             <h2 id="title" class="title">Setup of joke</h2>
             <h2 id="punchline" class="title">Punchline</h2>
             <div class="likes-section">
@@ -32,17 +32,26 @@
                 <button id="like-button" class="like-button">♥</button>
             </div>
             <ul id="comments-list" class="comments">
-                <li>Get rid of these comments</li>
-                <li>And replace them with the real ones</li>
-                <li>From the server</li>
+                <li><em>What happens to a frog's car when it breaks down?</em></br>
+                    <strong>It gets toad away!</strong>
+                </li>
             </ul>
             <form id="comment-form" class="comment-form">
-                <input class="comment-input" type="text" name="comment" id="comment" placeholder="Add a comment..." />
+                <input class="comment-input" type="text" name="comment" id="comment"
+                    placeholder="Comment here..." /><br>
                 <button class="comment-button" type="submit">Comment</button>
+                <button class="comment-button" type="click" id="donate">Donate</button>
             </form>
         </div>
     </div>
-<script src="/assets/main.js"></script>
+    <!-- End of image card -->
+    <!-- copyright -->
+    <footer>
+        <div class="image-container" id="da">
+            <p>&copy;<em id="date"></em>All Rights &#124; Adams Wonderboy</p>
+        </div>
+    </footer>
+    <script src="/assets/main.js"></script>
 </body>
 
 </html>
