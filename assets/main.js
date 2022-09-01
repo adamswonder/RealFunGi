@@ -1,10 +1,17 @@
 // write your code here
 
+// Adds current date
+function todayDate() {
+    var d = new Date();
+    var n = d.getFullYear() + "  ";
+    return document.getElementById("date").innerHTML = n;
+}
+
 // Invoke all the functions nested when the browser loads
 document.addEventListener('DOMContentLoaded', () => {
     clickListener();
     localHost();
-    passComments(); 
+    passComments();
 })
 
 // fetch image from Json file through its url and passing back to my DOM
@@ -36,12 +43,19 @@ const localHost = () => {
             document.getElementById('card-title').textContent = `Joke type: ${object[1][0].type}`
             document.querySelector('#punchline').textContent = `${object[1][0].punchline}`
             document.querySelector('#title').textContent = `${object[1][0].setup}`
-            // document.querySelector('#card-image').src = `${object[1][0].image}`
+            document.querySelector('#card-image').src = `${object[1][0].image}`
             console.log(object)
         })
         .catch(err => console.error(err));
 
 }
+
+// Listens to donate button click and promps user to enter donations after which the result is displayed
+document.querySelector('#donate').addEventListener('click', () => {
+    let donate = prompt('Enter amount to donate in $ :')
+    alert(`Donation of $ ${donate} received`)
+
+})
 
 // Listens to click event when the liker glyphy is clicked and invokes the addLikes to perform incremement
 const clickListener = () => {
