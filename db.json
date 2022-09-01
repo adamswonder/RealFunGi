@@ -1,33 +1,31 @@
 {
   "test": [
     {
-      "id": 1,
-      "title": "Woofing those bugs away",
-      "likes": 0,
-      "image": "./assets/coder-dog.png"
+     
     },
     [
       {
+        "id": 1,
+        "type": "stand-up",
+        "setup": "What you call a d without an I?",
+        "punchline": "No I-d-ea.",
+        "image": "./assets/images/dad.png"
+      },
+      {
         "id": 2,
         "type": "programming",
-        "setup": "Why do Java programmers wear glasses?",
-        "punchline": "Because they don't C#",
+        "setup": "What's the best thing about a Boolean?",
+        "punchline": "Even if you're wrong, you're only off by a bit.",
         "image": "./assets/images/dad.png"
       },
       {
         "id": 3,
         "type": "programming",
-        "setup": "What's the best thing about a Boolean?",
-        "punchline": "Even if you're wrong, you're only off by a bit.",
+        "setup": "Why do Java programmers wear glasses?",
+        "punchline": "Because they don't C#",
         "image": "./assets/images/dad.png"
       }
-    ],
-    {
-      "title": "Woofing those bugs away",
-      "likes": 0,
-      "image": "./assets/coder-dog.png",
-      "id": 2
-    }
+    ]
   ],
   "comments": [
     {
