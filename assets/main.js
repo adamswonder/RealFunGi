@@ -1,11 +1,11 @@
 // write your code here
 
 // Invoke all the functions nested when the browser loads
-document.addEventListener('DOMContentLoaded', () => {
-    clickListener();
-    getImage();
-    passComments();
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//     clickListener();
+//     getImage();
+//     passComments();
+// })
 
 // fetch image from Json file through its url and passing back to my DOM
 const getImage = () => {
@@ -24,15 +24,32 @@ const getImage = () => {
     //         console.log(object)})
     //     .catch(err => console.error(err));
 
-    return fetch(`http://localhost:3000/test/`)
-    .then((res) => (res.json()))
-    .then((object) => {
-        document.getElementById('card-title').textContent = `Joke type: ${object[1][0].type}`
-        document.querySelector('#punchline').textContent = `${object[1][0].punchline}`
-        document.querySelector('#title').textContent = `${object[1][0].setup}`
-        document.querySelector('#card-image').src = `${object[1][0].image}`
-        console.log(object)})
-    .catch(err => console.error(err));
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '6c807f1012msh578acea3f1bb612p1a2c1djsn2d2ecc18c86d',
+            'X-RapidAPI-Host': 'daddyjokes.p.rapidapi.com'
+        }
+    };
+    
+    return fetch('https://daddyjokes.p.rapidapi.com/random', options)
+        .then(response => response.json())
+        .then(response => {
+            document.getElementById('card-title').textContent = response.joke
+            
+            
+            console.log(response)})
+        .catch(err => console.error(err));
+
+    // return fetch(`http://localhost:3000/test/`)
+    // .then((res) => (res.json()))
+    // .then((object) => {
+    //     document.getElementById('card-title').textContent = `Joke type: ${object[1][0].type}`
+    //     document.querySelector('#punchline').textContent = `${object[1][0].punchline}`
+    //     document.querySelector('#title').textContent = `${object[1][0].setup}`
+    //     document.querySelector('#card-image').src = `${object[1][0].image}`
+    //     console.log(object)})
+    // .catch(err => console.error(err));
     
 }
 
