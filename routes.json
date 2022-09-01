@@ -1,4 +1,3 @@
 {
-    "/images/:id": "/images/:id?_embed=comments",
     "/test/:id":"/test/:id?_emded=comments"
 }
