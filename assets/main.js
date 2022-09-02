@@ -43,7 +43,7 @@ const localHost = () => {
             document.getElementById('card-title').textContent = `Joke type: ${object[1][0].type}`
             document.querySelector('#punchline').textContent = `${object[1][0].punchline}`
             document.querySelector('#title').textContent = `${object[1][0].setup}`
-            document.querySelector('#card-image').src = `${object[0].image}`
+            // document.querySelector('#card-image').src = `${object[0].image}`
             console.log(object)
         })
         .catch(err => console.error(err));
