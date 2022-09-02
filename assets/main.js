@@ -28,7 +28,7 @@ const getImage = () => {
         .then(response => response.json())
         .then(object => {
             document.getElementById('title').textContent = object.body[0].setup
-            document.querySelector('').textContent = object.body[0].punchline
+            document.querySelector('#punchline').textContent = object.body[0].punchline
             console.log(object)
         })
         .catch(err => console.error(err));
@@ -43,7 +43,7 @@ const localHost = () => {
             document.getElementById('card-title').textContent = `Joke type: ${object[1][0].type}`
             document.querySelector('#punchline').textContent = `${object[1][0].punchline}`
             document.querySelector('#title').textContent = `${object[1][0].setup}`
-            document.querySelector('#card-image').src = `${object[1][0].image}`
+            document.querySelector('#card-image').src = `${object[0].image}`
             console.log(object)
         })
         .catch(err => console.error(err));
@@ -90,7 +90,7 @@ const commentCallBack = (commentor) => {
     document.querySelector('#comments-list').appendChild(ul)
 }
 
-// selects the form placeholser and listens for a submit event, prevent the form from calling itself and calls our commentCallBack function passing it to the target.
+// selects the form placeholder and listens for a submit event, prevent the form from calling itself and calls our commentCallBack function passing it to the target.
 document.querySelector('#comment-form').addEventListener('submit', (e) => {
     e.preventDefault()
     commentCallBack(e.target.comment.value)
