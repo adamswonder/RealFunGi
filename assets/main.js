@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localHost();
     passComments();
     getImage();
+    todayDate();
 })
 
 // fetch image from Json file through its url and passing back to my DOM
