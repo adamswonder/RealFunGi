@@ -90,10 +90,12 @@ const commentCallBack = (commentor) => {
     let ul = document.createElement('li')
     ul.textContent = `${commentor}`
     document.querySelector('#comments-list').appendChild(ul)
+
 }
 
 // selects the form placeholder and listens for a submit event, prevent the form from calling itself and calls our commentCallBack function passing it to the target.
 document.querySelector('#comment-form').addEventListener('submit', (e) => {
     e.preventDefault()
     commentCallBack(e.target.comment.value)
+    document.querySelector('#comment-form').reset()
 })
