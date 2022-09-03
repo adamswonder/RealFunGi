@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clickListener();
     localHost();
     passComments();
+    getImage();
 })
 
 // fetch image from Json file through its url and passing back to my DOM
